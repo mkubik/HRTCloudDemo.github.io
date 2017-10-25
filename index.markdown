@@ -1,6 +1,8 @@
 ---
 layout: default
+title: Herzlich Willkommen
 ---
-# Hello World
 
-Hier wird bald viel mehr Text erscheinen
+# {{ page.title }}
+
+zum Bluemix Workshop an der Hochschule Reutlingen.
