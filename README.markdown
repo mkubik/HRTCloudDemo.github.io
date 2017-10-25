@@ -11,7 +11,7 @@ This is a spike on blogging using GitHub pages.
 * Run jekyll
 
   ```
-  jekyll serve --baseurl ''
+  jekyll serve --baseurl 'spiking-blog'
   ```
 
   See [jekyllrb.com/docs/github-pages](http://jekyllrb.com/docs/github-pages/) for details.
