@@ -1,4 +1,8 @@
-This is a spike on blogging using GitHub pages.
+This is the web site for Hochschule Reutlingen Cloud Demos.
+
+# Publish New Content
+
+Add your Markdown or HTML files to `_labs` and `git push`. GitHub Pages will update the page a couple of minutes later.
 
 # Local Test
 
