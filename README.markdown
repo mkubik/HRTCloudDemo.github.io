@@ -5,13 +5,13 @@ This is a spike on blogging using GitHub pages.
 * Install [jekyll](http://jekyllrb.com/):
 
   ```bash
-  gem install
+  gem install jekyll
   ```
 
 * Run jekyll
 
   ```
-  jekyll serve --baseurl 'spiking-blog'
+  jekyll serve --baseurl ''
   ```
 
   See [jekyllrb.com/docs/github-pages](http://jekyllrb.com/docs/github-pages/) for details.
