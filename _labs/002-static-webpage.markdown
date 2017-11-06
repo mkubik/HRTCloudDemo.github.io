@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Run a static webpage on Bluemix
+title: Run a static webpage on _IBM Cloud_
 ---
 
 # {{ page.title }}
@@ -21,7 +21,7 @@ Using your favorite editor, create a new file in a new subdirectory and copy the
 The content of the document......
 </body>
 
-</html> 
+</html>
 ```
 
 Then save the file as index.html

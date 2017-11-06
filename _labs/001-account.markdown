@@ -1,26 +1,26 @@
 ---
 layout: default
-title: Bluemix-Account anlegen
+title: _IBM Cloud_-Account anlegen
 ---
 
 # {{ page.title }}
 
-Bevor wir beginnen, benötigt jeder einen Bluemix-Account:
+Bevor wir beginnen, benötigt jeder einen _IBM Cloud_-Account:
 
 ## Promo-Code abholen
 
 * Öffnen Sie [TODO.onthehub.com](https://TODO.onthehub.com/) im Browser
-* Legen Sie den "IBM Bluemix Promo Code - 6 Month Trial" in den Warenkorb.
+* Legen Sie den "_IBM Cloud_ Promo Code - 6 Month Trial" in den Warenkorb.
 * Bestätigen Sie den Account mit Hilfe der eMail, die Sie erhalten.
-* Registrieren Sie sich für den Bluemix-Promo-Code mit dem *registration code*, den jeder separat erhält. Die Option "Request Additional Eligibility" benötigen Sie nicht.
+* Registrieren Sie sich für den _IBM Cloud_-Promo-Code mit dem *registration code*, den jeder separat erhält. Die Option "Request Additional Eligibility" benötigen Sie nicht.
 * Gehen Sie zurück zum Warenkorb und dann zur Kasse
 * Überprüfen Sie die AGB und wählen Sie "Accept", falls Sie zustimmen
 * Vervollständigen Sie den Fragebogen. Für den Kursnamen können Sie `Web Services (Steffen Uhlig)` eingeben.
 * Notieren Sie den angezeigten Promo-Code (hat das Format `AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE`)
 
-Mit dem Promo-Code können Sie einen neuen Bluemix-Account anlegen und die kostenlose Phase auf 6 Monate verlängern. Der Code kann nur ein mal verwendet werden und muß innerhalb von 5 Monaten nach Ausstellung eingelöst werden.
+Mit dem Promo-Code können Sie einen neuen _IBM Cloud_-Account anlegen und die kostenlose Phase auf 6 Monate verlängern. Der Code kann nur ein mal verwendet werden und muß innerhalb von 5 Monaten nach Ausstellung eingelöst werden.
 
-## Bluemix-Account anlegen
+## _IBM Cloud_-Account anlegen
 
 * Legen Sie auf [bluemix.net](https://bluemix.net) einen neuen Account an.
 * Bestätigen Sie den Account mit Hilfe der eMail, die Sie erhalten.
