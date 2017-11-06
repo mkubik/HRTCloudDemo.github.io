@@ -49,7 +49,7 @@ and provide a name in the right (_IBM Cloud_-)organization<br> <br>![simepl_cf](
     memory: 128M
     host: whochats
   ```
-<br><br>on your local machine. Then manually run `cf push` and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the `mybluemix.net` domain  by default so your FQDN is `<host>.mybluemix.net`. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br><br>
+  <br><br>on your local machine. Then manually run `cf push` and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the `mybluemix.net` domain  by default so your FQDN is `<host>.mybluemix.net`. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br><br>
 
 ## Test
 - Try to access the url you provided by the `manifest.yml`
