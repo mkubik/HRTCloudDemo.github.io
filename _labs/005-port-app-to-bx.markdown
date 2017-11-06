@@ -32,30 +32,19 @@ Once your app is working successfully, proceed to the next step.
 ## Create a CI/CD pipeline
 
 - Go to the _IBM Cloud_ main menu
-and click on `DevOps`, then click on `Toolchains`
----
-![main navigation](main_menu.png?raw=true)![tc](tc.png?raw=true)
-- On the next screen, select `Create Toolchain`
----
-![create_tc](create_toolchain.png?raw?true)
+and click on `DevOps`, then click on `Toolchains` <br>![main navigation](main_menu.png?raw=true)![tc](tc.png?raw=true)
+
+- On the next screen, select `Create Toolchain` <br>![create_tc](create_toolchain.png?raw?true)
 
 - Select the `Simple Cloudfoundry Toolchain`
----
-and provide a name in the right (_IBM Cloud_-)organization ![simepl_cf](simple_cf_tc.png?raw=true))
-![tc_name](tc_name.png?raw=true).
+and provide a name in the right (_IBM Cloud_-)organization <br>![simepl_cf](simple_cf_tc.png?raw=true))<br>![tc_name](tc_name.png?raw=true).
 
 - You now need to connect your git repository to that toolchain, so that once you push your code on the command line of your local workstation.
 
-- You may need to authorize _IBM Cloud_ to access your `GitHub` account. ![git_auth](git_auth.png
-  )
-- The toolchain takes over to process the deployment to _IBM Cloud_
----
-![tc_git](tc_git.png)
+- You may need to authorize _IBM Cloud_ to access your `GitHub` account.<br>![git_auth](git_auth.png)
+- The toolchain takes over to process the deployment to _IBM Cloud_.<br>![tc_git](tc_git.png)
 
-- Once you created the toolchain, the individual tools should show `Configured` and the build and deploy steps are triggered automatically.
----
-![tc_config](toolchain_config.png)
-![tc_pipeline](tc_pipeline.png)
+- Once you created the toolchain, the individual tools should show `Configured` and the build and deploy steps are triggered automatically.<br>![tc_config](toolchain_config.png)<br>![tc_pipeline](tc_pipeline.png)
 
 - _IBM Cloud_ generates a hostname based on the git repository name, in this case `chat.mybluemix.net`. There is a reasonable chance that this name is already taken, so we need to work around this.
 Create a `manifest.yml` with the following content:
@@ -70,3 +59,4 @@ on your local machine. Then manually run `cf push` and verify your app is pickin
 
 
 ## Test
+- Try to access the url you provided by the `manifest.yml`
