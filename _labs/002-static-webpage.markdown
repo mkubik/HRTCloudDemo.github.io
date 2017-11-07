@@ -37,17 +37,26 @@ title: Run a static webpage on _IBM Cloud_
 1.  Push the app:
 
     <pre>
-    cf push <span id="app_name">random-app-name</span> -b staticfile_buildpack
+    cf push <span class="app_name">random-app-name</span> -b staticfile_buildpack
     </pre>
+
+    - The `-b` switch tells Cloud Foundry (CF) to use the static file buildpack for this application. Usually CF detects the type of application you want to deploy automatically. However, so far, our "application" is so simple that we need to tell CF that it should treat it as a set of static files.
+
+    - Make sure you run this command from within the app directory (that contains the `index.html`).
 
 1.  Observe the output and look for the line starting with `urls:`. This line tells you the fully-qualified domain name of the started application. Open it in a browser and verify that the page looks just like when you opened it locally.
 
 ## References
 
-* Cloud Foundry Documentation: [Staticfile Buildpack](https://docs.cloudfoundry.org/buildpacks/staticfile/index.html)
+* [Getting Started with the `cf` CLI](https://docs.cloudfoundry.org/cf-cli/getting-started.html)
+* [Staticfile Buildpack](https://docs.cloudfoundry.org/buildpacks/staticfile/index.html)
 
 <script type="text/javascript" src="{{ site.baseurl }}/js/random-app-name.js"></script>
 <script type="text/javascript">
-  var span = document.getElementById("app_name");
-  span.parentNode.replaceChild(document.createTextNode(random_app_name()), span);
+  var app_name = random_app_name();
+  var spans = document.getElementsByClassName("app_name");
+  for (i = 0; i < spans.length; i++) {
+      var span = spans[i];
+      span.parentNode.replaceChild(document.createTextNode(app_name), span);
+  }
 </script>
