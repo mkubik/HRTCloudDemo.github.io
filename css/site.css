@@ -30,6 +30,10 @@ pre {
     background: rgb(211,211,211);
 }
 
+p {
+    line-height: 1.5;
+}
+
 /* LAYOUT CSS */
 .pure-img-responsive {
     max-width: 100%;
