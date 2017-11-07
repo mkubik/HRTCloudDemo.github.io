@@ -23,6 +23,8 @@ samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
   background: rgb(211,211,211)
+  border: 1px solid black;
+  border-radius: 6px;
 }
 
 pre {
