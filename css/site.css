@@ -27,6 +27,8 @@ samp {
 
 pre {
     background: rgb(211,211,211)
+    border: 1px solid black;
+    border-radius: 6px;
 }
 
 /* LAYOUT CSS */
