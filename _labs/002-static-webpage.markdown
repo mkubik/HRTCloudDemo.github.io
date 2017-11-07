@@ -20,6 +20,7 @@ title: Run a static webpage on _IBM Cloud_
     </body>
     </html>
     ```
+
 1.  Preview the file in a web browser and edit until you are happy with it.
 
 ## Deploy
