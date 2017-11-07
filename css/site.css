@@ -30,7 +30,7 @@ pre {
     background: rgb(211,211,211);
 }
 
-p {
+p,ul li {
     line-height: 1.5;
 }
 
