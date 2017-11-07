@@ -41,7 +41,7 @@ and provide a name in the right (_IBM Cloud_-)organization<br> <br>![simepl_cf](
 - You may need to authorize _IBM Cloud_ to access your **GitHub** account.<br><br>![git_auth](git_auth.png)<br><br>
 - The toolchain takes over to process the deployment to _IBM Cloud_.<br><br>![tc_git](tc_git.png)<br><br>
 - Once you created the toolchain, the individual tools should show **Configured** and the build and deploy steps are triggered automatically.<br><br>![tc_config](toolchain_config.png)<br>![tc_pipeline](tc_pipeline.png)<br><br>
-- _IBM Cloud_ generates a hostname based on the git repository name, in this case `chat.mybluemix.net`. There is a reasonable chance that this name is already taken, so we need to work around this.<br>Create a `manifest.yml` with the following content:<br><br>
+- _IBM Cloud_ generates a hostname based on the git repository name, in this case `chat.mybluemix.net`. There is a reasonable chance that this name is already taken, so we need to work around this.<br>Create a `manifest.yml` with the following content:<br>
   ```
   ---
   applications:
@@ -49,7 +49,7 @@ and provide a name in the right (_IBM Cloud_-)organization<br> <br>![simepl_cf](
     memory: 128M
     host: whochats
   ```
-  on your local machine. Then manually run `cf push` and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the `mybluemix.net` domain  by default so your FQDN is `<host>.mybluemix.net`. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br><br>
+on your local machine. Then manually run `cf push` and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the `mybluemix.net` domain  by default so your FQDN is `<host>.mybluemix.net`. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br><br>
 
 ## Test
 - Try to access the url you provided by the `manifest.yml`
