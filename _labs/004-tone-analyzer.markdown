@@ -77,17 +77,10 @@ git clone <url from the last step> and change into the created folder
 
   - access the app in your Browser via
 
-    ``` https://<appname from the cd push command>.eu-de.bluemix.net```
+    <pre>
+    https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
+    </pre>
 
   - Submitting with all defaults should return "happy" in the mood field
 
-
-<script type="text/javascript" src="{{ site.baseurl }}/js/random-app-name.js"></script>
-<script type="text/javascript">
-  var app_name = random_app_name();
-  var spans = document.getElementsByClassName("app_name");
-  for (i = 0; i < spans.length; i++) {
-      var span = spans[i];
-      span.parentNode.replaceChild(document.createTextNode(app_name), span);
-  }
-</script>
+{% include random_app_name.html %}
