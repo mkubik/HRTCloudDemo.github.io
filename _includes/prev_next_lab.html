@@ -6,17 +6,19 @@
     {% assign nexturl = labs.first.url %}
   {% endif %}
 
-  {% for links in labs %}
-    {% if links.title == page.title %}
+  {% for lab in labs %}
+    {% if lab.title == page.title %}
       {% unless forloop.first %}
         {% assign prevurl = prev.url %}
       {% endunless %}
+
       {% unless forloop.last %}
         {% assign next = labs[forloop.index] %}
         {% assign nexturl = next.url %}
       {% endunless %}
     {% endif %}
-    {% assign prev = links %}
+
+    {% assign prev = lab %}
   {% endfor %}
 
   <div class="nav">
