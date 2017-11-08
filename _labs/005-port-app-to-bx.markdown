@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: lab
 title: Port the Chat App to IBM Cloud
 ---
-
-# {{ page.title }}
 
 ## Get the code
 

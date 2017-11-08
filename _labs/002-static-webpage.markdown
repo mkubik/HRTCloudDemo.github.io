@@ -1,9 +1,7 @@
 ---
-layout: default
-title: Run a static webpage on _IBM Cloud_
+layout: lab
+title: Run a static webpage on IBM Cloud
 ---
-
-# {{ page.title }}
 
 ## Create a simple HTML file
 

@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: lab
 title: Collaborate
 ---
-
-# {{ page.title }}
 
 In this lab you will create a team of two developers (e.g. with your neighbor) and collaborate on improving the application.
 

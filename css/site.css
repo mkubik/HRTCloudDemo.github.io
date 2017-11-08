@@ -189,3 +189,6 @@ p,ul li {
         text-align: center;
     }
 }
+
+.nav .prev { float:left }
+.nav .next { float:right }

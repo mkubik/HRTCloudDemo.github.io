@@ -1,0 +1,32 @@
+{% if site.labs %}
+  {% assign labs = site.labs %}
+
+  {% if labs.size > 1 %}
+    {% assign prevurl = labs.last.url %}
+    {% assign nexturl = labs.first.url %}
+  {% endif %}
+
+  {% for links in labs %}
+    {% if links.title == page.title %}
+      {% unless forloop.first %}
+        {% assign prevurl = prev.url %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next = labs[forloop.index] %}
+        {% assign nexturl = next.url %}
+      {% endunless %}
+    {% endif %}
+    {% assign prev = links %}
+  {% endfor %}
+
+  <div class="nav">
+    {% if labs.size > 1 %}
+      {% if prevurl %}
+        <span class="prev"><a href="{{prevurl}}">Previous</a></span>
+      {% endif %}
+      {% if nexturl %}
+        <span class="next"><a href="{{nexturl}}">Next</a></span>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endif %}

@@ -1,9 +1,7 @@
 ---
-layout: default
-title: _IBM Cloud_-Account anlegen
+layout: lab
+title: IBM Cloud-Account anlegen
 ---
-
-# {{ page.title }}
 
 Bevor wir beginnen, benötigt jeder einen _IBM Cloud_-Account:
 

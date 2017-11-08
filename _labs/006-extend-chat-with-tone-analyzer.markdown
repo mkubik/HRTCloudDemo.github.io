@@ -1,21 +1,19 @@
 ---
-layout: default
+layout: lab
 title: Extend the Chat app with Mood Indication - Simple Microservice
 ---
 
-# {{ page.title }}
-
 ## Purpose
 
-Content of this exercise is to enhance the chat app 
+Content of this exercise is to enhance the chat app
 to indicate the mood of a chat partner.
 
-The Tone Analyzer App that you deployed in the 
+The Tone Analyzer App that you deployed in the
 "Consuming Services" exercise will take the role of a
 micro service providing an API to get the mood indication.
 
 This API is provided via the route "https://<your tone app>/tone"
-which can be accessed via a POST request 
+which can be accessed via a POST request
 (Content-Type: application/JSON)
 
 The request format does look like this:

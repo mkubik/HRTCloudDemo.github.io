@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: lab
 title: Consuming Cloud Services
 ---
-
-# {{ page.title }}
 
 ## Introduction
 
@@ -24,7 +22,7 @@ and click on **Catalog**, then select **Watson** in the menu on the left side an
 
 - After beeing redirected the Tone Anayzer page the service is now ready to use
 
-- Retrieve the credentials for your service instance 
+- Retrieve the credentials for your service instance
 
     1. Click Service credentials.
     2. Click View credentials under Actions.
@@ -51,7 +49,7 @@ git clone <url from the last step> and change into the created folder
 
 - edit the new file **.env** and fill in username, password and url of your instance of the Tone Analyzer service
 
-- test the app locally 
+- test the app locally
   - Install dependent packages via ```npm -i```
   - Start the app via ```node app.js```
   - You can open the app by visiting http://localhost:3000 in your browser
@@ -62,25 +60,25 @@ git clone <url from the last step> and change into the created folder
 - push the working app to IBM Cloud
   - set the API endpoint to your region
 
-    ```bx api api.eu-de.bluemix.net``` 
+    ```bx api api.eu-de.bluemix.net```
   - login into the IBM Cloud
 
     ```bx login```
 
   - target your organisation and space
-    
+
     ```bx target -o <YOUR ORG> -s <YOUR SPACE>```
 
   - deploy your app to the cloud
-  
-    <code> 
+
+    <code>
     cf push <span class="app_name">random-app-name</span>
     </code>
 
-  - access the app in your Browser via 
-  
+  - access the app in your Browser via
+
     ``` https://<appname from the cd push command>.eu-de.bluemix.net```
-   
+
   - Submitting with all defaults should return "happy" in the mood field
 
 
@@ -93,6 +91,3 @@ git clone <url from the last step> and change into the created folder
       span.parentNode.replaceChild(document.createTextNode(app_name), span);
   }
 </script>
-
-
-
