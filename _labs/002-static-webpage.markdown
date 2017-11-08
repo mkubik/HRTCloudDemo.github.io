@@ -9,6 +9,7 @@ title: Run a static webpage on _IBM Cloud_
 
 1.  Create a new directory that will hold the files for the new web site
 1.  In that directory, create a new file `index.html` with the following content:
+
     ```html
     <!DOCTYPE html>
     <html>
@@ -28,11 +29,10 @@ title: Run a static webpage on _IBM Cloud_
 1.  Logon to the IBM Cloud using `cf`:
 
     ```bash
-    cf login -a https://api.eu-gb.bluemix.net
+    cf login -a https://api.eu-de.bluemix.net
     ```
 
-    Provide your username and password and select the organization and space.
-    If no space exists yet, create one using `cf create-space dev -o $ORG_NAME`, where `$ORG_NAME` is the name of the org you choose on first login. This is typically your email address.
+    Provide your username and password and select the organization and space. If no space exists yet, create one using `cf create-space dev -o $ORG_NAME`, where `$ORG_NAME` is the name of the org you choose on first login. This is typically your email address.
 
 1.  Push the app:
 
@@ -44,19 +44,26 @@ title: Run a static webpage on _IBM Cloud_
 
     - Make sure you run this command from within the app directory (that contains the `index.html`).
 
-1.  Observe the output and look for the line starting with `urls:`. This line tells you the fully-qualified domain name of the started application. Open it in a browser and verify that the page looks just like when you opened it locally.
+1.  Observe the output and look for the line starting with `urls:`. This line tells you the fully-qualified domain name of the started application:
+
+    <pre>
+    requested state: started
+    instances: 1/1
+    usage: 1G x 1 instances
+    urls: <span class="app_name">random-app-name</span>.eu-de.mybluemix.net
+    last uploaded: Wed Nov 8 18:26:38 UTC 2017
+    stack: cflinuxfs2
+    buildpack: staticfile_buildpack
+
+         state     since                    cpu    memory       disk       details
+    #0   running   2017-11-08 07:26:52 PM   0.0%   3.9M of 1G   7M of 1G
+    </pre>
+
+  Open the URL in a browser and verify that the page looks just like when you opened it locally.
 
 ## References
 
 * [Getting Started with the `cf` CLI](https://docs.cloudfoundry.org/cf-cli/getting-started.html)
 * [Staticfile Buildpack](https://docs.cloudfoundry.org/buildpacks/staticfile/index.html)
 
-<script type="text/javascript" src="{{ site.baseurl }}/js/random-app-name.js"></script>
-<script type="text/javascript">
-  var app_name = random_app_name();
-  var spans = document.getElementsByClassName("app_name");
-  for (i = 0; i < spans.length; i++) {
-      var span = spans[i];
-      span.parentNode.replaceChild(document.createTextNode(app_name), span);
-  }
-</script>
+{% include random_app_name.html %}
