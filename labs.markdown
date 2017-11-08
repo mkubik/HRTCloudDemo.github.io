@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Übungen
+title: Labs
 permalink: /labs/index.html
 ---
 
