@@ -41,7 +41,7 @@ The provides sample app uses the Watson Tone Analyzer service to provide an simp
   ![fork](lab4_fork.png?raw=true)
 
 - Copy the URL of your repository from the GitHub UI
-![fork](lab4_clone.png?raw=true)
+![clone](lab4_clone.png?raw=true)
 
 
 - Clone your fork of the repository to your local disk
@@ -56,6 +56,8 @@ git clone <url from the last step> and change into the created folder
   - Start the app via ```node app.js```
   - You can open the app by visiting http://localhost:3000 in your browser
   - Submitting with all defaults should return "happy" in the mood field
+
+![toneapp](lab4_toneapp.png?raw=true)
 
 - push the working app to IBM Cloud
   - set the API endpoint to your region
