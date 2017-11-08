@@ -3,7 +3,7 @@ layout: lab
 title: Create IBM Cloud-Account
 ---
 
-Before we can start, we need to create an _IBM Cloud_ account:
+Before you can start, you will need to create an _IBM Cloud_ account and a promo code for it.
 
 ## Get the Promo-Code
 
