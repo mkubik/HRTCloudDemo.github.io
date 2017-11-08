@@ -1,25 +1,19 @@
 ---
 layout: default
-title: Split work - Collaborate!
+title: Collaborate
 ---
 
 # {{ page.title }}
 
-## Team up
+In this lab you will create a team of two developers (e.g. with your neighbor) and collaborate on improving the application.
 
- - create a team with your neighbour (2 max!)
+# Split the work
 
-## Team member 1
+One member of the team will change the content of the application (`index.html`). The other member will change the visual presentation.
 
- - Use the html file from the previous example
+1. Create and embed a minimal CSS file into `index.html`
+1. Create a Github Repository
 
-## Team member 2
+# Devops Toolchain
 
- - Create a new file using your favorite editor with the follwing content:
-
-```
-some css
-```
-
-## Both
-  - create a new devops toolchain
+{% include pipeline.markdown %}
