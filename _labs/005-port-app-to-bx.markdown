@@ -51,9 +51,11 @@ and provide a name in the right (_IBM Cloud_-)organization<br/> <br/>![simepl_cf
     on your local machine. Then manually run <code>cf push</code> and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the <code>mybluemix.net</code> domain  by default so your FQDN is <code><span class="app_name">whochats</span>.mybluemix.net</code>. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br/><br/>
 
 ## Test
-- Try to access [<code>https://<span class="app_name">xxx</span>.mybluemix.net</code>](https://<span class="app_name">xxx</span>.mybluemix.net)
+
+Go to https://<span class="app_name">random-app-name</span>.eu-de.mybluemix.net
 
 ## References
+
  * [Create a Toolchain](https://console.bluemix.net/docs/toolchains/toolchains_overview.html)
 
 {% include random_app_name.html %}
