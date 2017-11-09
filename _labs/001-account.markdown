@@ -1,47 +1,46 @@
 ---
-layout: default
-title: _IBM Cloud_-Account anlegen
+layout: lab
+title: Create IBM Cloud-Account
 ---
 
-# {{ page.title }}
+Before you can start, you will need to create an _IBM Cloud_ account and a promo code for it.
 
-Bevor wir beginnen, benötigt jeder einen _IBM Cloud_-Account:
+## Get the Promo-Code
 
-## Promo-Code abholen
+* Open [TODO.onthehub.com](https://TODO.onthehub.com/) in a browser
+* Put the "_IBM Cloud_ Promo Code - 6 Month Trial" into the shopping cart.
+* Confirm the account by clicking the link in the eMail you received.
+* Register for the _IBM Cloud_-Promo-Code with your personal *registration code* that you received. You don't need the option "Request Additional Eligibility".
+* Go back to the shopping cart and then to the checkout.
+* Check the terms and conditions and choose "Accept", if you agree.
+* Complete the details form. For the course name, you can use `Hochschule Reutlingen Cloud Demo`.
+* Note down the promo code (it has the format `AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE`).
 
-* Öffnen Sie [TODO.onthehub.com](https://TODO.onthehub.com/) im Browser
-* Legen Sie den "_IBM Cloud_ Promo Code - 6 Month Trial" in den Warenkorb.
-* Bestätigen Sie den Account mit Hilfe der eMail, die Sie erhalten.
-* Registrieren Sie sich für den _IBM Cloud_-Promo-Code mit dem *registration code*, den jeder separat erhält. Die Option "Request Additional Eligibility" benötigen Sie nicht.
-* Gehen Sie zurück zum Warenkorb und dann zur Kasse
-* Überprüfen Sie die AGB und wählen Sie "Accept", falls Sie zustimmen
-* Vervollständigen Sie den Fragebogen. Für den Kursnamen können Sie `Web Services (Steffen Uhlig)` eingeben.
-* Notieren Sie den angezeigten Promo-Code (hat das Format `AAAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE`)
+With the promo code, you can now create a new _IBM Cloud_ account and extend the trial period by 6 more months. The code can only be used once. It is only valid for five months after creation.
 
-Mit dem Promo-Code können Sie einen neuen _IBM Cloud_-Account anlegen und die kostenlose Phase auf 6 Monate verlängern. Der Code kann nur ein mal verwendet werden und muß innerhalb von 5 Monaten nach Ausstellung eingelöst werden.
+## Create IBM Cloud Account
 
-## _IBM Cloud_-Account anlegen
-
-* Legen Sie auf [bluemix.net](https://bluemix.net) einen neuen Account an.
-* Bestätigen Sie den Account mit Hilfe der eMail, die Sie erhalten.
-* Vergeben Sie einen Namen für die neue Organisation. Wählen Sie z.B. Ihren Namen (ohne Leerzeichen). Als Region sollten Sie "Germany" wählen.
+* Create a new account on [bluemix.net](https://bluemix.net).
+* Confirm the account by clicking the link in the eMail you received.
+* Provide a name for the new organization that is being created for you, e.g. your eMail address.
+* As a region, choose Germany.
 
     ![Organisation anlegen](create-org.png)
 
-* Legen Sie einen neuen Space an, z.B. `dev`.
+* Create a new space, e.g. `dev`.
 
-## Test-Zeitraum um 180 Tage verlängern
+## Extend the trial period to 180 days
 
-* Geben Sie den Promo-Code unter Account => Billing & Usage => Billing ein.
+* Enter your promo code under Account => Billing & Usage => Billing:
 
     ![Billing](billing.png)
 
-    Sie erhalten eine Meldung, daß Ihr Account zu einem Trial Account konvertiert sowie die Quota auf 2 GB erhöht wurde.
+    You will get a message saying that your account will be converted to a trial account. The quota will be raised to 2 GB, too.
 
     ![Promo-Code eingeben](enter-promo-code.png)
 
-* Prüfen Sie, daß der Test-Zeitraum auf 180 Tage verlängert wurde.
+* Check that your trial period was extended by 180 days:
 
     ![Trial verlängert](trial-extended.png)
 
-    Falls nicht: Support => Add Ticket.
+If you run into any issues, ask one of the facilitators or open a support ticket under Support => Add Ticket.

@@ -1,8 +1,14 @@
 ---
 layout: default
-title: Herzlich Willkommen
+title: Welcome
 ---
 
 # {{ page.title }}
 
-zum Bluemix Workshop an der Hochschule Reutlingen.
+to the Bluemix Workshop at Hochschule Reutlingen.
+
+## Labs
+
+{% for lab in site.labs %}
+  1. [{{ lab.title }}]({{ site.baseurl }}{{ lab.url }})
+{% endfor %}
