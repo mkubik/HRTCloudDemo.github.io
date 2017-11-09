@@ -5,11 +5,11 @@ title: Port the Chat App to IBM Cloud
 
 ## Get the code
 
-Clone your repository to your local disk.
+Clone your chat application repository to your local disk.
 
 ## Create a manifest
 
-Create a new deployment `manifest.yml` file in the cloned directory with the content shown below. Be sure to provide a name that is unique within the domain ''.
+Create a new deployment `manifest.yml` file in the cloned directory with the content shown below. Be sure to provide a name that is unique within the domain.
 
 <pre>
 ---
@@ -19,10 +19,10 @@ applications:
   instances: 1
 </pre>
 <br/><br/>
-This is a fairly simple manifest that should work for you as well. If you need want to check for more options please see https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html.
+This is a fairly simple manifest that should work for you as well. If you need want to check for more options please see [https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 
-This is a fairly simple manifest that should work for you as well. If you need want to check for more options please see the [documentation] (https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
+This is a fairly simple manifest that should work for you as well. If you need want to check for more options please see the [documentation](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
 ## Deploy
 
@@ -43,12 +43,12 @@ and provide a name in the right (_IBM Cloud_-)organization<br/> <br/>![simepl_cf
   <pre>
       ---
       applications:
-      - name: WhoChats
+      - name: <span class="app_name">whochats</span>
         memory: 128M
         host: <span class="app_name">whochats</span>
   </pre>
 
-    on your local machine. Then manually run <code>cf push</code> and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the <code>mybluemix.net</code> domain  by default so your FQDN is <code>[host].mybluemix.net</code>. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br/><br/>
+    on your local machine. Then manually run <code>cf push</code> and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the <code>mybluemix.net</code> domain  by default so your FQDN is <code><span class="app_name">whochats</span>.mybluemix.net</code>. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.<br/><br/>
 
 ## Test
 - Try to access [<code>https://<span class="app_name">xxx</span>.mybluemix.net</code>](https://<span class="app_name">xxx</span>.mybluemix.net)
@@ -56,14 +56,4 @@ and provide a name in the right (_IBM Cloud_-)organization<br/> <br/>![simepl_cf
 ## References
  * [Create a Toolchain](https://console.bluemix.net/docs/toolchains/toolchains_overview.html)
 
-{% include pipeline.markdown %}
-
-<script type="text/javascript" src="{{ site.baseurl }}/js/random-app-name.js"></script>
-<script type="text/javascript">
-  var app_name = random_app_name();
-  var spans = document.getElementsByClassName("app_name");
-  for (i = 0; i < spans.length; i++) {
-      var span = spans[i];
-      span.parentNode.replaceChild(document.createTextNode(app_name), span);
-  }
-</script>
+{% include random_app_name.html %}
