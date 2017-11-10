@@ -1,6 +1,19 @@
-- Go to the _IBM Cloud_ main menu and click on **DevOps**, then click on **Toolchains**.
+- Go to the _IBM Cloud_ main menu and click on **DevOps**, then click on **Continous Delivery**.
+
+  ![create_cd](cd_create.png)
+
+  then you may need to switch to region _US-South_ temporarily and create a new space. After you created the space, switch back to region _Germany_ and create the toolchain in region _US-South_ as shown below
+
+  ![cd_pipeline](cd_pipeline_us.png)
+
+  then click:
+
+  ![cd_createtc](cd_create_tc.png)
+
+  If you need to change the toolchain afterwards you need to switch to the _US-South_ region before acccessing the **DevOps** section.
 
   ![main navigation](main_menu.png?raw=true)
+
   ![tc](tc.png?raw=true)
 
 - On the next screen, select **Create Toolchain**.
