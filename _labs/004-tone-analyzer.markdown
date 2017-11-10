@@ -5,13 +5,13 @@ title: Consuming Cloud Services
 
 ## Introduction
 
-The IBM Cloud platform (like other cloud platforms) provides a huge set of services 
+The IBM Cloud platform (like other cloud platforms) provides a huge set of services
 that can be used as ready to use building blocks to enhance your application.
 
 These services typically only have to be instantiated and configured to be used.
 
 Such a service might be a database engines like Cloudant, and IOT platform,
-a mobile services that send push notification or might provide to artificial intelligence capabilities like the Watson Tone Anaylzer used in this exercise. 
+a mobile services that send push notification or might provide to artificial intelligence capabilities like the Watson Tone Anaylzer used in this exercise.
 
 The Watson Tone Anaylzer service is able to detect moods and tones in a text submitted to it.
 
@@ -22,7 +22,7 @@ The purpose of this exercise is to enable you to configure and use existing clou
 ## Subscribe to the IBM Tone Analyzer Service
 
 - Go to the _IBM Cloud_ main menu
-and click on **Catalog**, 
+and click on **Catalog**,
 <br><br>![catalog](lab4_catalog.png?raw=true)
 
 - Select **Watson** in the menu on the left side
@@ -45,7 +45,7 @@ and click on **Catalog**,
 
 ## Get the code of the sample app
 
-The sample app uses the Watson Tone Analyzer service to score lines of text as happy or unhappy. 
+The sample app uses the Watson Tone Analyzer service to score lines of text as happy or unhappy.
 The app provides a basic user interface and an API that you will use in an later excercise.
 
 - Fork the git repository [linked here](https://github.com/HRTCloudDemo/HRTToneDemo) into your own Github account by pressing the **Fork** button in that Github Repository
@@ -64,13 +64,13 @@ git clone <url from the last step> and change into the created folder
 - Edit the new file **.env** and fill in username, password and url of your instance of the Tone Analyzer service
 
 - Test the app locally
-  - Install dependent packages via: ```npm -i```
+  - Install dependent packages via: ```npm i```
   - Start the app via: ```node app.js```
   - You can open the app by visiting [http://localhost:3000](http://localhost:3000) in your browser
   - Press the submit button on teh loaded page.
     The word "happy" in the mood field
   - You can play around by changing the conent of teh input fields
-  
+
   Disclaimer: The scoring algorithm that condenses of the complex respone of the Tone Analyzer service to one single word is quite simple and might return surprising results. Feel free to improve.
 
 ![toneapp](lab4_toneapp.png?raw=true)
@@ -88,8 +88,8 @@ git clone <url from the last step> and change into the created folder
 
     ```cf target -o <YOUR ORG> -s <YOUR SPACE>```
 
-  - deploy your app to the cloud 
-    
+  - deploy your app to the cloud
+
     <code>
     cf push <span class="app_name">random-app-name</span>
     </code>
@@ -101,7 +101,7 @@ git clone <url from the last step> and change into the created folder
     <pre>
     https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
     </pre>
-    
+
 
   - Submitting with all defaults should again return "happy" in the mood field
 
