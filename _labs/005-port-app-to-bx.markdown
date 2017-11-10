@@ -21,6 +21,23 @@ applications:
 
 This is a fairly simple manifest that should work for you as well. If you need want to check for more options please see the  [Cloud Foundry documentation on deployment using manifests](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html).
 
+## Hint: Configure the correct port
+
+IBM Cloud assignes an internal port number to your app automically.
+
+This port number is not visible to the outside world but only used by the routers 
+that connect external users to your application.
+
+In your app you can find out correct port at startup like this:
+
+<pre>
+let port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
+
+app.listen(port, () =>  {
+  console.log('Server running on port: %d', port);
+});
+</pre>
+
 ## Deploy
 
 Run `cf push` to push this to IBM Cloud. Only proceed to the next step if your app is working correctly.
