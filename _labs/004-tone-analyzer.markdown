@@ -5,22 +5,35 @@ title: Consuming Cloud Services
 
 ## Introduction
 
-In this exercise you will instantiate an instance of the Watson Tone Analyzer Service and connect it to a simple app that is provided to you.
-The Watson Tone Analyzer Service is able to detect moods and tones in a text submitted to it.
+The IBM Cloud platform (like other cloud platforms) provides a huge set of services 
+that can be used as ready to use building blocks to enhance your application.
+
+These services typically only have to be instantiated and configured to be used.
+
+Such a service might be a database engines like Cloudant, and IIOT platform,
+a mobile services that send push notification or might provide to artificial intelligence capabilities like the Watson Tone Anaylzer used in this exercise. 
+
+The Watson Tone Anaylzer service is able to detect moods and tones in a text submitted to it.
+
+In this exercise you will instantiate an instance of the Watson Tone Analyzer Service and connect it to a simple app that is provided to you in a Github Repository.
 
 The purpose of this exercise is to enable you to configure and use existing cloud services to add value to your application without much work.
-
-The IBM Cloud provides multiple services for areas like artificial intelligence (aka Watson), Internet of things and many areas more.
 
 ## Subscribe to the IBM Tone Analyzer Service
 
 - Go to the _IBM Cloud_ main menu
-and click on **Catalog**, then select **Watson** in the menu on the left side and click on **Tone Analyzer**
-<br><br>![catalog](lab4_catalog.png?raw=true)![watson](lab4_watson.png?raw=true)![tone](lab4_tone_tile.png?raw=true)<br><br>
+and click on **Catalog**, 
+<br><br>![catalog](lab4_catalog.png?raw=true)
+
+- Select **Watson** in the menu on the left side
+<br/><br/>![watson](lab4_watson.png?raw=true)
+
+- Click on **Tone Analyzer**
+<br/><br/>![tone](lab4_tone_tile.png?raw=true)<br><br>
 
 - On the next page leave all default values as they are and click **Create**
 
-- After beeing redirected the Tone Anayzer page the service is now ready to use
+  Wou will get redirected to another page. At this point of time the service is ready to use
 
 - Retrieve the credentials for your service instance
 
@@ -32,28 +45,33 @@ and click on **Catalog**, then select **Watson** in the menu on the left side an
 
 ## Get the code of the sample app
 
-The provides sample app uses the Watson Tone Analyzer service to provide an simple API and user interface to score lines of text as happy or unhappy.  
+The sample app uses the Watson Tone Analyzer service to score lines of text as happy or unhappy. 
+The app provides a basic user interface and an API that you will use in an later excercise.
 
-- Fork the git repository https://github.com/HRTCloudDemo/HRTToneDemo into your own Github account by pressing the **Fork** button in that Github Repository
+- Fork the git repository [linked here](https://github.com/HRTCloudDemo/HRTToneDemo) into your own Github account by pressing the **Fork** button in that Github Repository
 
-  ![fork](lab4_fork.png?raw=true)
+<br/><br/>![fork](lab4_fork.png?raw=true)
 
-- Copy the URL of your repository from the GitHub UI
-![clone](lab4_clone.png?raw=true)
+- Copy the URL of your repository from the Github UI
 
+<br/><br/>![clone](lab4_clone.png?raw=true)
 
 - Clone your fork of the repository to your local disk
 git clone <url from the last step> and change into the created folder
 
-- copy the file **.env.sample** and save it under the new name **.env**
+- Copy the file **.env.sample** and save it under the new name **.env**
 
-- edit the new file **.env** and fill in username, password and url of your instance of the Tone Analyzer service
+- Edit the new file **.env** and fill in username, password and url of your instance of the Tone Analyzer service
 
-- test the app locally
-  - Install dependent packages via ```npm -i```
-  - Start the app via ```node app.js```
-  - You can open the app by visiting http://localhost:3000 in your browser
-  - Submitting with all defaults should return "happy" in the mood field
+- Test the app locally
+  - Install dependent packages via: ```npm -i```
+  - Start the app via: ```node app.js```
+  - You can open the app by visiting [http://localhost:3000](http://localhost:3000) in your browser
+  - Press the submit button on teh loaded page.
+    The word "happy" in the mood field
+  - You can play around by changing the conent of teh input fields
+  
+  Disclaimer: The scoring algorithm that condenses of the complex respone of the Tone Analyzer service to one single word is quite simple and might return surprising results. Feel free to improve.
 
 ![toneapp](lab4_toneapp.png?raw=true)
 
@@ -61,7 +79,8 @@ git clone <url from the last step> and change into the created folder
   - set the API endpoint to your region
 
     ```bx api api.eu-de.bluemix.net```
-  - login into the IBM Cloud
+
+  - login into the IBM Cloud using your credentials
 
     ```bx login```
 
@@ -69,18 +88,28 @@ git clone <url from the last step> and change into the created folder
 
     ```bx target -o <YOUR ORG> -s <YOUR SPACE>```
 
-  - deploy your app to the cloud
-
+  - deploy your app to the cloud 
+    
     <code>
     cf push <span class="app_name">random-app-name</span>
     </code>
 
-  - access the app in your Browser via
+     (the app name shown in the cf push command is generated randomly to avoid naming conflicts)
+
+  - access the app in your browser via
 
     <pre>
     https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
     </pre>
+    
 
-  - Submitting with all defaults should return "happy" in the mood field
+  - Submitting with all defaults should again return "happy" in the mood field
+
+  ## References
+
+* URL of Demo Application: https://github.com/HRTCloudDemo/HRTToneDemo
+* [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
+* [Watson Tone Analyzer Documentation](https://console.bluemix.net/docs/services/tone-analyzer/index.html#about)
+* [More complete sample app on Github](https://github.com/watson-developer-cloud/tone-analyzer-nodejs)
 
 {% include random_app_name.html %}

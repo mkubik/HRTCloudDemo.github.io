@@ -1,18 +1,20 @@
 ---
 layout: lab
-title: Extend the Chat app with Mood Indication - Simple Microservice
+title: Extend your Chat Application with Mood Indication - Simple Microservice
 ---
 
 ## Purpose
 
-Content of this exercise is to enhance the chat app
+Content of this exercise is to enhance your chat app
 to indicate the mood of a chat partner.
 
-The Tone Analyzer App that you deployed in the
-"Consuming Services" exercise will take the role of a
-micro service providing an API to get the mood indication.
+The Tone Analyzer App that you deployed in the "Consuming Services" exercise will take the role of a
+micro service providing an API.
 
-This API is provided via the route "https://<your tone app>/tone"
+It provides an API via the route 
+
+```https://<your tone app>/tone```
+
 which can be accessed via a POST request
 (Content-Type: application/JSON)
 
@@ -38,3 +40,8 @@ The service will return a response JSON that does look like this:
 The service will return either "happy" or "unhappy" in the mood property.
 
 You should use this value to indicate the mood in your chat application.
+
+## References
+* [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
+* [Watson Tone Analyzer Documentation](https://console.bluemix.net/docs/services/tone-analyzer/index.html#about)
+* [request package to call APIs from Javascript](https://github.com/request/request)
