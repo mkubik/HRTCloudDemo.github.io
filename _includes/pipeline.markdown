@@ -28,16 +28,3 @@
   ![tc_pipeline](tc_pipeline.png)
 
 - _IBM Cloud_ generates a hostname based on the git repository name, in this case `chat.eu-de.mybluemix.net`. There is a reasonable chance that this name is already taken, so you need to specify our own host name.
-
-  Create a `manifest.yml` with the following content:
-
-  <pre>
-  applications:
-  - name: <span class="app_name">random-app-name</span>
-    memory: 128M
-    host: <span class="app_name">random-app-name</span>
-  </pre>
-
-  on your local machine. Then manually run `cf push` and verify your app is picking up the right name. _IBM Cloud_ is adding your host to the `eu-de.mybluemix.net` domain  by default so your FQDN is <code><span class="app_name">random-app-name</span>.eu-de.mybluemix.net</code>. Once you can access your hostname, commit and push your changes to git and wait for the pipeline to finish.
-
-{% include random_app_name.html %}
