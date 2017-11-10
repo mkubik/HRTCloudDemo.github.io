@@ -7,7 +7,7 @@ Before you can start, you will need to create an _IBM Cloud_ account and a promo
 
 ## Get the Promo-Code
 
-* Open [TODO.onthehub.com](https://TODO.onthehub.com/) in a browser
+* Open [ibm.onthehub.com](https://ibm.onthehub.com/) in a browser
 * Put the "_IBM Cloud_ Promo Code - 6 Month Trial" into the shopping cart.
 * Confirm the account by clicking the link in the eMail you received.
 * Register for the _IBM Cloud_-Promo-Code with your personal *registration code* that you received. You don't need the option "Request Additional Eligibility".
