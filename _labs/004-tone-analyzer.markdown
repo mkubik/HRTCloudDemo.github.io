@@ -10,7 +10,7 @@ that can be used as ready to use building blocks to enhance your application.
 
 These services typically only have to be instantiated and configured to be used.
 
-Such a service might be a database engines like Cloudant, and IIOT platform,
+Such a service might be a database engines like Cloudant, and IOT platform,
 a mobile services that send push notification or might provide to artificial intelligence capabilities like the Watson Tone Anaylzer used in this exercise. 
 
 The Watson Tone Anaylzer service is able to detect moods and tones in a text submitted to it.
@@ -78,15 +78,15 @@ git clone <url from the last step> and change into the created folder
 - push the working app to IBM Cloud
   - set the API endpoint to your region
 
-    ```bx api api.eu-de.bluemix.net```
+    ```cf api api.eu-de.bluemix.net```
 
   - login into the IBM Cloud using your credentials
 
-    ```bx login```
+    ```cf login```
 
   - target your organisation and space
 
-    ```bx target -o <YOUR ORG> -s <YOUR SPACE>```
+    ```cf target -o <YOUR ORG> -s <YOUR SPACE>```
 
   - deploy your app to the cloud 
     
