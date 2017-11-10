@@ -52,7 +52,7 @@ and provide a name in the right (_IBM Cloud_-)organization<br/> <br/>![simepl_cf
 
 ## Test
 
-Go to https://<span class="app_name">random-app-name</span>.eu-de.mybluemix.net
+Go to [https://<span class="app_name">random-app-name</span>.eu-de.mybluemix.net](https://<span class="app_name">random-app-name</span>.eu-de.mybluemix.net)
 
 ## References
 
