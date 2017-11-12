@@ -31,11 +31,7 @@ that connect external users to your application.
 In your app you can find out correct port at startup like this:
 
 <pre>
-let port = process.env.PORT || process.env.VCAP_APP_PORT || 8080;
-
-app.listen(port, () =>  {
-  console.log('Server running on port: %d', port);
-});
+let port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 </pre>
 
 ## Deploy
