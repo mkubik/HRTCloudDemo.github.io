@@ -82,6 +82,16 @@ Disclaimer: The scoring algorithm that condenses of the complex response of the 
 
 # Push the working app to IBM Cloud
 
+In the root directory of the app create a file named `manifest.yml` with the following content:
+
+  <pre>
+      ---
+      applications:
+      - name: <span class="app_name"><span class="app_name">random-app-name</span></span>
+        memory: 128M
+        host: <span class="app_name"><span class="app_name">random-app-name</span></span>
+  </pre>
+
 - Set the API endpoint to your region
 
   ```bash
@@ -103,10 +113,8 @@ Disclaimer: The scoring algorithm that condenses of the complex response of the 
 - Deploy your app to the cloud
 
   <code>
-  cf push <span class="app_name">random-app-name</span>
+  cf push
   </code>
-
-  (the app name shown in the cf push command is generated randomly to avoid naming conflicts)
 
 - Access the app in your browser as https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
 
