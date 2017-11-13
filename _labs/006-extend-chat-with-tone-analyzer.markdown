@@ -42,6 +42,7 @@ The service will return either "happy" or "unhappy" in the mood property.
 You should use this value to indicate the mood in your chat application.
 
 ## References
-* [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
+* [Source code of the Tone Analyzer application](https://github.com/HRTCloudDemo/HRTToneDemo)
+* [Watson Tone Analyzer Home Page](https://www.ibm.com/watson/services/tone-analyzer/)
 * [Watson Tone Analyzer Documentation](https://console.bluemix.net/docs/services/tone-analyzer/index.html#about)
-* [request package to call APIs from Javascript](https://github.com/request/request)
+* [Request package to call APIs from Javascript](https://github.com/request/request)
