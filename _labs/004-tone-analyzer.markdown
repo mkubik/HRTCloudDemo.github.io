@@ -21,15 +21,17 @@ The purpose of this exercise is to enable you to configure and use existing clou
 
 ## Subscribe to the IBM Tone Analyzer Service
 
-- Go to the _IBM Cloud_ main menu
-and click on **Catalog**,
-<br><br>![catalog](lab4_catalog.png?raw=true)
+- Go to the _IBM Cloud_ main menu and click on **Catalog**,
+
+  ![catalog](lab4_catalog.png?raw=true)
 
 - Select **Watson** in the menu on the left side
-<br/><br/>![watson](lab4_watson.png?raw=true)
+
+  ![watson](lab4_watson.png?raw=true)
 
 - Click on **Tone Analyzer**
-<br/><br/>![tone](lab4_tone_tile.png?raw=true)<br><br>
+
+  ![tone](lab4_tone_tile.png?raw=true)
 
 - On the next page leave all default values as they are and click **Create**
 
@@ -38,8 +40,8 @@ and click on **Catalog**,
 - Retrieve the credentials for your service instance
 
     1. Click Service credentials.
-    2. Click View credentials under Actions.
-    3. Copy the username, password and values.
+    1. Click View credentials under Actions.
+    1. Copy the username, password and values.
 
 - Note the values to be used in the next section
 
@@ -50,64 +52,77 @@ The app provides a basic user interface and an API that you will use in an later
 
 - Fork the git repository [linked here](https://github.com/HRTCloudDemo/HRTToneDemo) into your own Github account by pressing the **Fork** button in that Github Repository
 
-<br/><br/>![fork](lab4_fork.png?raw=true)
+  ![fork](lab4_fork.png?raw=true)
 
 - Copy the URL of your repository from the Github UI
 
-<br/><br/>![clone](lab4_clone.png?raw=true)
+  ![clone](lab4_clone.png?raw=true)
 
 - Clone your fork of the repository to your local disk
-git clone <url from the last step> and change into the created folder
 
-- Copy the file **.env.sample** and save it under the new name **.env**
+  ```bash
+  git clone <url from the last step> and change into the created folder
+  ```
 
-- Edit the new file **.env** and fill in username, password and url of your instance of the Tone Analyzer service
+- Copy the file `.env.sample` and save it under the new name `.env`
 
-- Test the app locally
-  - Install dependent packages via: ```npm i```
-  - Start the app via: ```node app.js```
-  - You can open the app by visiting [http://localhost:3000](http://localhost:3000) in your browser
-  - Press the submit button on teh loaded page.
-    The word "happy" in the mood field
-  - You can play around by changing the conent of teh input fields
+- Edit the new file `.env` and fill in username, password and url of your instance of the Tone Analyzer service
 
-  Disclaimer: The scoring algorithm that condenses of the complex respone of the Tone Analyzer service to one single word is quite simple and might return surprising results. Feel free to improve.
+# Test the app locally
+
+- Install dependent packages via: `npm i`
+- Start the app via: `node app.js`
+- You can open the app by visiting [http://localhost:3000](http://localhost:3000) in your browser
+- Press the submit button on the loaded page. Enter the word "happy" in the mood field
+- You can play around by changing the content of the input fields
+
+Disclaimer: The scoring algorithm that condenses of the complex response of the Tone Analyzer service to one single word is quite simple and might return surprising results. Feel free to improve.
 
 ![toneapp](lab4_toneapp.png?raw=true)
 
-- push the working app to IBM Cloud
-  - set the API endpoint to your region
+# Push the working app to IBM Cloud
 
-    ```cf api api.eu-de.bluemix.net```
+In the root directory of the app create a file named `manifest.yml` with the following content:
 
-  - login into the IBM Cloud using your credentials
+  <pre>
+      ---
+      applications:
+      - name: <span class="app_name"><span class="app_name">random-app-name</span></span>
+        memory: 128M
+        host: <span class="app_name"><span class="app_name">random-app-name</span></span>
+  </pre>
 
-    ```cf login```
+- Set the API endpoint to your region
 
-  - target your organisation and space
+  ```bash
+  cf api api.eu-de.bluemix.net
+  ```
 
-    ```cf target -o <YOUR ORG> -s <YOUR SPACE>```
+- login into the IBM Cloud using your credentials
 
-  - deploy your app to the cloud
+  ```bash
+  cf login
+  ```
 
-    <code>
-    cf push <span class="app_name">random-app-name</span>
-    </code>
+- target your organisation and space
 
-     (the app name shown in the cf push command is generated randomly to avoid naming conflicts)
+  ```bash
+  cf target -o <YOUR ORG> -s <YOUR SPACE>
+  ```
 
-  - access the app in your browser via
+- Deploy your app to the cloud
 
-    <pre>
-    https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
-    </pre>
+  <code>
+  cf push
+  </code>
 
+- Access the app in your browser as https://<span class="app_name">random-app-name</span>.eu-de.bluemix.net
 
-  - Submitting with all defaults should again return "happy" in the mood field
+- Submitting with all defaults should again return "happy" in the mood field
 
-  ## References
+## References
 
-* URL of Demo Application: https://github.com/HRTCloudDemo/HRTToneDemo
+* [Source code of the demo application](https://github.com/HRTCloudDemo/HRTToneDemo)
 * [Watson Tone Analyzer](https://www.ibm.com/watson/services/tone-analyzer/)
 * [Watson Tone Analyzer Documentation](https://console.bluemix.net/docs/services/tone-analyzer/index.html#about)
 * [More complete sample app on Github](https://github.com/watson-developer-cloud/tone-analyzer-nodejs)
