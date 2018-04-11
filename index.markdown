@@ -5,7 +5,7 @@ title: Welcome
 
 # {{ page.title }}
 
-to the _IBM Cloud_ Workshop at Hochschule Reutlingen.
+to the _IBM Cloud_ Meetup at University of Stuttgart.
 
 ## Labs
 
